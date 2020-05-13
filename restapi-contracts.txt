@@ -1,0 +1,15 @@
+API:Course API
+
+Resources:
+---------
+Topic, Course, Lesson
+(A Topic can have multiple courses and a Course can consist of multiple Lessons)
+
+
+
+Topics:
+GET 				/topics					get all topics 
+GET					/topics/id				get the topic
+POST				/topics					create new topic
+PUT					/topics/id				updates the topic
+DELETE				/topics/id				deletes the topic

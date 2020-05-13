@@ -1,0 +1,63 @@
+1. Bill of Materials
+---------------------------------------------------------------------------------
+<project>
+ 	<parent>
+		<groupId>org.springframework.boot</groupid>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+	</parent>
+</project>
+
+If you click maven -> update project
+
+There will be no dependency added in the classpath. 
+This annotation will just make sure our project is a spring boot project. 
+And this parent will make sure what versions needs to be downloaded when dependencies are added. 
+*********WHAT VERSIONS************
+
+--------------------------------------------------------------------------------
+
+Now after adding a web based meta dependency and click on maven -> update project.
+
+<dependencies>
+	<dependency>
+		<groupId>org.springframework.boot</groupid>
+		<artifactId>spring-boot-starter-web</artifactId>
+		<!--No version is required-->
+	</dependency>
+</dependencies>
+
+ 
+The dependency will be added in the “Maven dependency” folder. 
+
+Example: tomcat version, spring boot version, log version, spring web version
+
+
+The actual dependencies are downloaded with spring-boot-starter-web where version is already taken care in parent.
+*********WHAT JARS*********
+
+---------------------------------------------------------------------------------
+
+Specify the version in the parent i.e. spring-boot-starter-parent
+The dependencies added will download the jars. example: spring-boot-starter-web
+
+This concept is called Bills of materials..
+
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Spring boot provides the Embedded Tomcat Server
+
+We have not added any servlets container in the configuration. 
+It has embedded tomcat server by default because of below reasons:
+
+•	Convenience
+•	Servlet container config is now application config
+•	Standalone application – easy to run, easy to develop, easy to deploy
+•	Useful for micro service architecture – no need to deploy all micro services separately on server, embedded tomcat server is useful
+
+

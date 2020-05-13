@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.javabrains.springboot</groupId>
+  <artifactId>course-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Java Brains API</name>
+  
+  
+ <!-- 
+  Create the current project as a child of spring boot project 
+  using below parent section (Maven concept of parent-child inheritance) 
+  
+  Spring boot has convention over configuration, opinionated framework.
+  spring-boot-starter-parent is a project created by spring boot team 
+  where the default configuration has been added. 
+  
+  Meaning this project contains all the opinionated set of configurations.
+  We have inherited this project
+-->
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>1.4.2.RELEASE</version>
+  </parent>
+
+<!--  
+
+	If you are creating a web application, you need to import 
+	bunch of jars to create a web application
+	
+	Spring boot helps us to provide all the bunch of jars 
+	by providing a meta-dependency/ wrapper dependency/ convenience dependency 
+	which in turn provides all the jars required to create a web application automatically
+	
+-->
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+
+  
+<!-- 
+	Setup application related changes (if you don’t need any default setup provided by spring boot)
+	By default, Spring Boot parent project provides java version 1.6, If you need java version 1.8.
+	You can configure separately as below.
+		
+ -->  
+  	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+ <!-- Refer notes.txt for the details
+ 		Bill of materials
+  --> 
+  
+</project>
